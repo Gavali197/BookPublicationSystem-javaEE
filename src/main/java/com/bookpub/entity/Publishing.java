@@ -26,6 +26,54 @@ public class Publishing {
 
     private Integer printQuantity;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Integer getPrintQuantity() {
+        return printQuantity;
+    }
+
+    public void setPrintQuantity(Integer printQuantity) {
+        this.printQuantity = printQuantity;
+    }
+
+    public String getPrintedDate() {
+        return printedDate;
+    }
+
+    public void setPrintedDate(String printedDate) {
+        this.printedDate = printedDate;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
+
+    public String getOnlinePublishDate() {
+        return onlinePublishDate;
+    }
+
+    public void setOnlinePublishDate(String onlinePublishDate) {
+        this.onlinePublishDate = onlinePublishDate;
+    }
+
     private String printedDate;
 
     private Integer stock;

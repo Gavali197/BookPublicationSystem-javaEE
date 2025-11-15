@@ -30,6 +30,46 @@ public class Sales {
 
     private LocalDateTime lastUpdated;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Integer getSoldCopies() {
+        return soldCopies;
+    }
+
+    public void setSoldCopies(Integer soldCopies) {
+        this.soldCopies = soldCopies;
+    }
+
+    public Double getRoyaltyAmount() {
+        return royaltyAmount;
+    }
+
+    public void setRoyaltyAmount(Double royaltyAmount) {
+        this.royaltyAmount = royaltyAmount;
+    }
+
+    public LocalDateTime getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(LocalDateTime lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
+
     @PrePersist
     protected void onCreate() {
         soldCopies = 0;

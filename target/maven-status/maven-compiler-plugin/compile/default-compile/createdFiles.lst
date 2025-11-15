@@ -1,0 +1,17 @@
+com\bookpub\service\ActivityLogService.class
+com\bookpub\service\FileService.class
+com\bookpub\entity\ActivityLog.class
+com\bookpub\service\BookService.class
+com\bookpub\service\UserService.class
+com\bookpub\entity\Publishing.class
+com\bookpub\service\PublishingService.class
+com\bookpub\entity\Book.class
+war\JakartaRestConfiguration.class
+war\resources\JakartaEE10Resource.class
+com\bookpub\entity\Reviews.class
+com\bookpub\entity\User.class
+com\bookpub\service\ReviewService.class
+com\bookpub\enums\BookStatus.class
+com\bookpub\entity\BookFiles.class
+com\bookpub\entity\Sales.class
+com\bookpub\service\SalesService.class

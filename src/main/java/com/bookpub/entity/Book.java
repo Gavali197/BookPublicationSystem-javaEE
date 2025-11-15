@@ -3,20 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.bookpub.entity;
+
 import jakarta.persistence.*;
 import com.bookpub.enums.BookStatus;
 import java.time.LocalDateTime;
-
 
 /**
  *
  * @author digit
  */
-
 @Entity
 @Table(name = "books")
 public class Book {
- 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -44,4 +43,12 @@ public class Book {
         status = BookStatus.PENDING;
     }
     //getter setter
+
+    public BookStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(BookStatus status) {
+        this.status = status;
+    }
 }
