@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="../templates/layout.xhtml">
+
+    <ui:define name="content">
+
+        <div class="card">
+            <h2>Welcome, #{loginBean.loggedUser.username}</h2>
+            <p>Your Role: AUTHOR</p>
+
+            <h:link outcome="/author/upload.xhtml" value="Upload New Book" styleClass="btn"/>
+            <br/><br/>
+            <h:link outcome="/author/books.xhtml" value="View My Books" styleClass="btn"/>
+        </div>
+
+    </ui:define>
+</ui:composition>

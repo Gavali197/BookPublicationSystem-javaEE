@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="../templates/layout.xhtml">
+
+    <ui:define name="content">
+
+        <div class="card" style="max-width:600px; margin:auto;">
+            <h2>Review Book</h2>
+
+            <h:panelGrid columns="2">
+
+                <h:outputLabel value="Title:" />
+                #{adminBookBean.selectedBook.title}
+
+                <h:outputLabel value="Author:" />
+                #{adminBookBean.selectedBook.author.username}
+
+                <h:outputLabel value="Description:" />
+                #{adminBookBean.selectedBook.description}
+            </h:panelGrid>
+
+            <br/>
+
+            <h:form>
+                <h:outputLabel value="Comments:"/><br/>
+                <h:inputTextarea value="#{adminBookBean.reviewComments}" rows="5" style="width:100%;" />
+
+                <br/><br/>
+
+                <h:commandButton value="Approve" action="#{adminBookBean.approve}" styleClass="btn"/>
+                <h:commandButton value="Request Changes" action="#{adminBookBean.requestChanges}" style="margin-left:10px;" styleClass="btn"/>
+            </h:form>
+
+        </div>
+
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <title>Book Publication System</title>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+
+<h:body>
+
+    <!-- HEADER -->
+    <div style="background:#0057e7; padding:15px;">
+        <h2 style="color:white; margin:0;">Book Publication Management System</h2>
+    </div>
+
+    <!-- 🔵 NAVIGATION MENU (PASTE HERE) -->
+    <div style="background:#003f9e; padding:10px;">
+        <h:panelGroup rendered="#{loginBean.loggedUser != null}">
+
+            <h:link outcome="/author/dashboard.xhtml" value="Author Dashboard"
+                    style="color:white; margin-right:15px;"
+                    rendered="#{loginBean.loggedUser.role eq 'AUTHOR'}"/>
+
+            <h:link outcome="/admin/dashboard.xhtml" value="Admin Dashboard"
+                    style="color:white; margin-right:15px;"
+                    rendered="#{loginBean.loggedUser.role eq 'ADMIN'}"/>
+
+            <h:commandLink value="Logout" action="#{loginBean.logout}"
+                           style="color:white; margin-left:15px;"/>
+        </h:panelGroup>
+    </div>
+    <!-- 🔵 END NAV -->
+
+    <!-- PAGE CONTENT -->
+    <div class="container">
+        <ui:insert name="content"/>
+    </div>
+
+</h:body>
+</html>

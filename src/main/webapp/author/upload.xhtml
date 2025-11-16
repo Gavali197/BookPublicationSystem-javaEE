@@ -1,0 +1,32 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="../templates/layout.xhtml">
+
+    <ui:define name="content">
+
+        <div class="card" style="max-width:600px; margin:auto;">
+            <h2>Upload New Book</h2>
+
+            <h:form enctype="multipart/form-data">
+
+                <h:panelGrid columns="2">
+
+                    <h:outputLabel value="Title:"/>
+                    <h:inputText value="#{authorBookBean.newBook.title}" required="true"/>
+
+                    <h:outputLabel value="Category:"/>
+                    <h:inputText value="#{authorBookBean.newBook.category}"/>
+
+                    <h:outputLabel value="Description:"/>
+                    <h:inputTextarea value="#{authorBookBean.newBook.description}"/>
+                </h:panelGrid>
+
+                <br/>
+                <h:commandButton value="Submit" action="#{authorBookBean.createBook}" styleClass="btn"/>
+            </h:form>
+
+        </div>
+
+    </ui:define>
+</ui:composition>
