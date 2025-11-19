@@ -21,7 +21,7 @@ public class LoginBean implements Serializable {
     private UserService userService;
 
     // Login action
-    public String login() {
+    public String login(){
         if (userService.verifyLogin(username, password)) {
             loggedUser = userService.findByUsername(username);
 
@@ -46,11 +46,14 @@ public class LoginBean implements Serializable {
     }
 
     // Logout action
-    public String logout() {
-        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
-        return "/login.xhtml?faces-redirect=true";
-    }
+public String logout() {
+    loggedUser = null;
+    username = null;
+    password = null;
 
+    FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+    return "/login.xhtml?faces-redirect=true";
+}
     // Getters & Setters
     public String getUsername() {
         return username;
