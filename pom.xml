@@ -5,7 +5,7 @@
     <artifactId>BookPublicationSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>BookPublicationSystem-1.0-SNAPSHOT</name>
+ 
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,6 +45,9 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
+                    <compilerArgs>
+                        <arg>-Xlint</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
@@ -54,4 +57,5 @@
             </plugin>
         </plugins>
     </build>
+    <name>BookPublicationSystem</name>
 </project>

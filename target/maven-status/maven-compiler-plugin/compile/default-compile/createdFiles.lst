@@ -1,3 +1,4 @@
+AuthFilter.class
 com\bookpub\service\ActivityLogService.class
 com\bookpub\service\FileService.class
 com\bookpub\entity\ActivityLog.class
@@ -11,7 +12,6 @@ com\bookpub\service\PublishingService.class
 com\bookpub\entity\Book.class
 war\JakartaRestConfiguration.class
 war\resources\JakartaEE10Resource.class
-com\bookpub\filter\AuthFilter.class
 com\bookpub\entity\Reviews.class
 com\bookpub\entity\User.class
 com\bookpub\service\ReviewService.class
