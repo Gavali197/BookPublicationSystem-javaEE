@@ -1,36 +1,32 @@
 
+
+
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:h="https://jakarta.ee/xml/ns/jakartaee/html"
-                xmlns:f="https://jakarta.ee/xml/ns/jakartaee/core"
-                xmlns:ui="https://jakarta.ee/xml/ns/jakartaee/facelets"
-                template="/templates/layout.xhtml">
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:ui="jakarta.faces.facelets"
+                template="/template/layout.xhtml">
 
     <ui:define name="content">
 
         <div class="card" style="max-width:400px; margin:auto; margin-top:50px;">
-
-            <h2>Login</h2>
-
             <h:form>
+                <h2>Login</h2>
                 <h:panelGrid columns="2" style="margin-top:20px;">
 
                     <h:outputLabel for="username" value="Username:"/>
-                    <h:inputText id="username" value="#{loginBean.username}" required="true"/>
+                    <h:inputText id="username" value="#{LoginBean.username}" required="true"/>
 
                     <h:outputLabel for="password" value="Password:"/>
-                    <h:inputSecret id="password" value="#{loginBean.password}" required="true"/>
+                    <h:inputSecret id="password" value="#{LoginBean.password}" required="true"/>
 
                 </h:panelGrid>
 
                 <br/>
 
-                <h:commandButton value="Login" action="#{loginBean.login}" styleClass="btn"/>
+                <h:commandButton value="Login" action="#{LoginBean.login}" styleClass="btn"/>
             </h:form>
-
         </div>
 
     </ui:define>
-
 </ui:composition>
-
-

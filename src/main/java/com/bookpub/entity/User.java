@@ -4,10 +4,6 @@
  */
 package com.bookpub.entity;
 
-/**
- *
- * @author digit
- */
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
