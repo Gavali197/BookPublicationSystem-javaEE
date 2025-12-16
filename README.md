@@ -1,1 +1,1 @@
-college project 
+of college project 
