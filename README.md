@@ -20,9 +20,9 @@
 > ⚡ A **modern enterprise gym management system** built using Jakarta EE technologies.  
 > Designed to manage gym operations efficiently with performance, security, and scalability.
 
-✔ Member Management  
+✔ Member Management .
 ✔ Trainer Management  
-✔ Membership Plans  
+✔ Membership Plans.
 ✔ Payment Tracking  
 ✔ Secure Authentication  
 ✔ Admin Dashboard  
